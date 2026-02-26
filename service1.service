@@ -1,0 +1,14 @@
+[Unit]
+Description=Service1 - Simulated Web Server
+After=network.target
+
+[Service]
+ExecStart=/home/devopsadmin/multi-service-systemd/service1.sh
+Restart=always
+User=devopsadmin
+WorkingDirectory=/home/devopsadmin/multi-service-systemd
+StandardOutput=journal
+StandardErrors=journal
+
+[Install]
+WantedBy=multi-user.agent

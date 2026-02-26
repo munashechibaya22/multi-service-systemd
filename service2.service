@@ -1,0 +1,14 @@
+[Unit]
+Description=Service2 - Logger
+After=network.target service1.service  # Depend on service1
+
+[Service]
+ExecStart=/home/devopsadmin/multi-service-systemd/service2.sh
+Restart=always
+User=devopsadmin
+WorkingDirectory=/home/devopsadmin/multi-service-systemd
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
