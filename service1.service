@@ -3,10 +3,10 @@ Description=Service3 - Monitor
 After=network.target service1.service service2.service  # Depend on both
 
 [Service]
-ExecStart=/home/devopsadmin/projects/multi-service-systemd/service3.sh
+ExecStart=/home/devopsadmin/multi-service-systemd/service3.sh
 Restart=always
 User=devopsadmin
-WorkingDirectory=/home/devopsadmin/projects/multi-service-systemd
+WorkingDirectory=/home/devopsadmin/multi-service-systemd
 StandardOutput=journal
 StandardError=journal
 
